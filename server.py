@@ -13,7 +13,7 @@ def serve_static(path):
 def home():
    return render_template('index.html')
 
-@app.route('/')
+@app.route('/card')
 def card():
    return render_template('card.html')
 
