@@ -84,7 +84,6 @@ h1 {
 .hide-mobile {
     display: none;
 }
-
 .container1 {
     max-width: 960px;
     margin-inline: auto;
@@ -99,21 +98,23 @@ h1 {
     display: block;
 }
 
-.title .primary{
+.title .primary {
     font-size: clamp(26px, 5vw, 52px);
     text-transform: uppercase;
     color: #fff;
 }
 
-.title .secondary{
-    font-size: clamp(14px,2.5vw, 16px);
+.title .secondary {
+    font-size: clamp(14px, 2.5vw, 16px);
     font-weight: 400;
     color: #d6d6e0;
 }
-.gallery-wrapper{
+
+.gallery-wrapper {
     display: flex;
 }
-.gallery-item{
+
+.gallery-item {
     position: relative;
     isolation: isolate;
     display: flex;
@@ -126,15 +127,16 @@ h1 {
     transition: flex 0.5s, opacity 0.25s;
 }
 
-.gallery-item:hover{
+.gallery-item:hover {
     opacity: 1;
-    flex: 5;
+    flex-grow: 5;
 }
 
-.gallery-item:not(:hover){
-    opacity: 0.75s;
+.gallery-item:not(:hover) {
+    opacity: 0.75;
 }
-.item-image{
+
+.item-image {
     position: relative;
     top: 0;
     right: 0;
@@ -144,9 +146,9 @@ h1 {
     object-fit: cover;
 }
 
-.item-description{
+.item-description {
     align-self: flex-end;
-    text-transform:uppercase;
+    text-transform: uppercase;
     color: #fff;
 }
 
@@ -161,17 +163,15 @@ h1 {
     display: inline-block;
     background: linear-gradient(90deg, #4136d9, #0086c7);
     padding: 10px;
-    box-shadow: 0 1px 10px
-        rgba(0,0,0,0.2);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
     transform: translateY(10px);
 }
 
-.name, 
-.role{
+.name,
+.role {
     opacity: 0;
-    transition: opacity 0.25;
-        transform: 0.3s;
-    transition-delay: .35s;    
+    transition: opacity 0.25s, transform 0.3s;
+    transition-delay: 0.35s;
 }
 
 .gallery-item:hover .name,
@@ -180,21 +180,22 @@ h1 {
     transform: translateY(0);
 }
 
-.gallery-item:not(:hover).name,
-.gallery-item:not(:hover).role {
+.gallery-item:not(:hover) .name,
+.gallery-item:not(:hover) .role {
     transition-delay: 0s;
 }
 
-@media screen and (max-width: 76px) {
-    .gallery-wrapper{
+@media screen and (max-width: 768px) {
+    .gallery-wrapper {
         flex-direction: column;
         height: 100vh;
     }
 
-.gallery-item:hover{
-    flex-basis: 100%;
+    .gallery-item:hover {
+        flex-basis: 100%;
+    }
 }
-}
+
 @media screen and (min-width: 991px) {
     .hide-mobile {
         display: block;
