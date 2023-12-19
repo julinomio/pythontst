@@ -17,6 +17,11 @@ def home():
 def card():
    return render_template('card.html')
 
+@app.route('/contacto')
+def card():
+   return render_template('contacto.html')
+
+
 @app.route('/<path:path>')
 def all_routes(path):
     return redirect('/')
